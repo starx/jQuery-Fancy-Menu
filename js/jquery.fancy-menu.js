@@ -16,6 +16,7 @@
 				'stair' : true,
 				'transition' : true
 			},
+			'offset' : '1em',
 			'mainColumn': 'auto',
 			'mainColumnColor' : 'rgba(0,102,153,0.9)',
 			'mainColumnShadow' : '0 0 10px 0px #666',
@@ -25,9 +26,10 @@
 			}
 		}, options);
 		
-		console.log(settings);
+		//console.log(settings);
 		$elContainer = this;
 		$el = this.find("ul.columns");
+		$el.css('margin', settings.offset);
 		$el.addClass(settings.identifier.containerClass);
 		$columns = $el.children("li");
 		console.log($columns);
@@ -55,18 +57,18 @@
         } else { $columns.css('marginTop', '5%'); }
         
         //Transition
-        
+        console.log($elContainer.position());
 		if(settings.effects.transition) {
 			if($elContainer.find('.fancy-overlay').size() == 0) {
 				$elContainer.prepend($("<div>", { 
 					class: 'fancy-overlay', 
 					css: { 
-						height: $elContainer.height(),
-						width: $elContainer.width(),
+						height: $elContainer.outerHeight(),
+						width: $elContainer.outerWidth(),
 						display: 'block',
 						position: 'absolute',
 						zIndex: 0,
-						background: '',
+						background: '',						
 						//border: '1px #000 solid',
 						//margin: "-20px 0 0 -20px"
 					} 
