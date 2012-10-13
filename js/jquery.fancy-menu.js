@@ -29,10 +29,11 @@
 		//console.log(settings);
 		$elContainer = this;
 		$el = this.find("ul.columns");
-		$el.css('margin', settings.offset);
-		$el.addClass(settings.identifier.containerClass);
+		
+		$el.addClass(settings.identifier.containerClass)
+			.css('margin', settings.offset);
 		$columns = $el.children("li");
-		console.log($columns);
+			
 		if(settings.mainColumn == 'auto') {
 			$mainColumnIndex = Math.round(($columns.size())/2);
 			$mainColumn = $columns.eq($mainColumnIndex-1);
@@ -40,6 +41,7 @@
 			$mainColumnIndex = settings.mainColumn;
 			$mainColumn = $columns.eq($mainColumnIndex-1);
 		}
+		
 		$curColumn = $("li."+settings.identifier.currentColumn, $el);
 		$otherColumns = $("li:not(."+settings.identifier.currentColumn+")", $el);
 		$allTitles = $("h2", $columns);
@@ -57,58 +59,56 @@
         } else { $columns.css('marginTop', '5%'); }
         
         //Transition
-        console.log($elContainer.position());
 		if(settings.effects.transition) {
-			if($elContainer.find('.fancy-overlay').size() == 0) {
-				$elContainer.prepend($("<div>", { 
-					class: 'fancy-overlay', 
-					css: { 
-						height: $elContainer.outerHeight(),
-						width: $elContainer.outerWidth(),
-						display: 'block',
-						position: 'absolute',
-						zIndex: 0,
-						background: '',						
-						//border: '1px #000 solid',
-						//margin: "-20px 0 0 -20px"
-					} 
-				}));	
-			}	
+                    if($elContainer.find('.fancy-overlay').size() == 0) {
+                        $elContainer.prepend($("<div>", { 
+                            'class': 'fancy-overlay', 
+                            'css': { 
+                                height: $elContainer.outerHeight(),
+                                width: $elContainer.outerWidth(),
+                                display: 'block',
+                                position: 'absolute',
+                                zIndex: 0,
+                                background: ''
+                                //border: '1px #000 solid',
+                                //margin: "-20px 0 0 -20px"
+                            } 
+                        }));	
+                    }	
 		}
 		
-		var animateColumns = function($parentColumn, $parentColumnColor = null) {						
+		var animateColumns = function($parentColumn, $parentColumnColor) {						
 			var $curColumn = $("li.curCol", $el);
-			//console.log($curColumn.size());
-			console.log($('.expanded').size()+"--" + $('.expanding').size());
+                        
 			// if not the first time
 			if($curColumn.size()) {
-				if(!$parentColumn.hasClass("curCol")) { //If current column is already active then dont do anything
-					// In case the main image of the column is showing then slide this up					
-					//console.log($curColumn);
-					$('.expanding, li.curCol', $el).each(function() {
-						
-						$(".image", $(this)).slideUp();
-						$curIndex = $(this).index()+1;
-						$colorIndex = $curIndex > $mainColumnIndex ? (2*$mainColumnIndex)-$curIndex : $curIndex;
-						var cValue = 255 - (($colorIndex - 1)*10);
-						
-						//resize previous column to normal size
-						$(this).animate({
-							width: "17.99%",
-							backgroundColor: "rgba("+cValue+","+cValue+","+cValue+",0.8)",
-							boxShadow: '0'
-						}, 200, function() {
-							//
-							
-						}); // finally remove the curent class indicator
-					});
-					animateMain($parentColumn, $parentColumnColor);
-				}	
+                            if(!$parentColumn.hasClass("curCol")) { //If current column is already active then dont do anything
+                                // In case the main image of the column is showing then slide this up					
+                                //console.log($curColumn);
+                                $('.expanding, li.curCol', $el).each(function() {
+
+                                    $(".image", $(this)).slideUp();
+                                    $curIndex = $(this).index()+1;
+                                    $colorIndex = $curIndex > $mainColumnIndex ? (2*$mainColumnIndex)-$curIndex : $curIndex;
+                                    var cValue = 255 - (($colorIndex - 1)*10);
+
+                                    //resize previous column to normal size
+                                    $(this).animate({
+                                        width: "17.99%",
+                                        backgroundColor: "rgba("+cValue+","+cValue+","+cValue+",0.8)",
+                                        boxShadow: '0'
+                                    }, 200, function() {
+                                            //
+
+                                    }); // finally remove the curent class indicator
+                                });
+                                animateMain($parentColumn, $parentColumnColor);
+                            }	
 			} else {
-				//if there are not current column then this is the first time it is being encountered					
-				animateMain($parentColumn, $parentColumnColor);
-				$(".image", $parentColumn).slideDown("slow", function() { 
-				});
+                            //if there are not current column then this is the first time it is being encountered					
+                            animateMain($parentColumn, $parentColumnColor);
+                            $(".image", $parentColumn).slideDown("slow", function() { 
+                            });
 			}
 				
 		};
