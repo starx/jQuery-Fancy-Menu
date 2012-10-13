@@ -16,134 +16,168 @@
             <script src='js/jquery.fancy-menu.js'></script>
             
             <style>
-				* { margin: 0; padding: 0; outline:none; }
+                * { margin: 0; padding: 0; outline:none; }
                 html, body { 
-					background: #eee; 
-					height: 100%;
-					font: 12px Verdana, Geneva, sans-serif;
-				}
+                    background: #eee; 
+                    height: 100%;
+                    font: 12px Verdana, Geneva, sans-serif;
+                }
                 
                 #wrapper { 
-					width: 960px; 
-					margin: 0 auto; 
-					background: #fff; 
-					border: 5px #ccc solid; 
-					border-style: none solid none solid; 
-					padding: 2em 1em;
-				}
+                    width: 960px; 
+                    margin: 0 auto; 
+                    background: #fff; 
+                    border: 5px #ccc solid; 
+                    border-style: none solid none solid; 
+                    padding: 2em 1em;
+                }
                 #wrapper > section + section { margin-top: 1em; }
                 #wrapper section { margin-left: 1em; margin-right: 1em;}
                 #wrapper section header { margin-bottom: 1em; }
                 
-                #demo-1 { margin-top: 1em; }
+                #demo-1 { margin-top: 1em; height: 300px; }                
                 
+                .button {
+                    padding: 1em 2em;
+                    border: 2px #ccc solid;
+                    color: #000;
+                    font-weight: bold;
+                    text-decoration: none;
+                    margin: 1em 0 0 0;
+                    display: inline-block;
+                    border-radius: 15px;
+                    -webkit-border-radius: 15px;
+                    -moz-border-radius: 15px;
+                }
             </style>
     </head>
 
     <body>
         <div id="wrapper">
 			<section class="description">
-				<header>
-					<h1> jQuery Fancy Columns</h1>
-				</header>
+                            <header>
+                                <h1> jQuery Fancy Columns</h1>
+                            </header>
 
-				<p>
-					A plugin for showing off your pages.
-				</p>
+                            <p>
+                                A plugin for showing off your pages.
+                            </p>
 			</section>
+            
 			<section>
-				<header>
-					<h2>Quick Look</h2>
-				</header>
-				<div>
-					<p>Here is how this plugins looks on the defaults options. Or you can look at the full <a href="demo.html">demo</a> instead</p>
-					<style>
-						#demo-1 { height: 300px; }
-					</style>
-					<script>
-						$(function() {	$("#demo-1").fancyMenu(); });
-					</script>
-					<div id="demo-1">
-						<ul class="columns">
-							<li class="column" data-transition-img='images/demo/patterns/1.jpg'>
-								<h2>Highlight Menu</h2>    		
-								<a class="image"><img src="image/demo/im.jpg" /></a>
-								<ul class="innerAccordian">
-									<li> 
-										<h3>Box Heading</h3>
-										<div>
-											Box Content
-										</div>
-									</li>
-								</ul>
-							</li>
-							
-							<li class="column" data-transition-img='images/demo/patterns/2.jpg' data-column-color="rgba(235, 128, 18, 0.8)">
-								<h2>Matching Column</h2>    		
-								<a class="image"><img src="image/demo/im.jpg" /></a>
-								<ul class="innerAccordian">
-									<li> 
-										<h3>Box Heading</h3>
-										<div>
-											Box Content
-										</div>
-									</li>
-								</ul>
-							</li>
-							
-							<li class="column" data-transition-img='images/demo/patterns/3.jpg'>
-								<h2>Default Setting</h2>    		
-								<a class="image"><img src="image/demo/im.jpg" /></a>
-								<ul class="innerAccordian">
-									<li> 
-										<h3>Box Heading</h3>
-										<div>
-											Box Content
-										</div>
-									</li>
-								</ul>
-							</li>
-							
-							<li class="column" data-transition-img='images/demo/patterns/4.jpg' data-column-color="rgb(168, 0, 67)">		
-								<h2>Opaque Columns</h2>    		
-								<a class="image"><img src="image/demo/im.jpg" /></a>
-								<ul class="innerAccordian">
-									<li> 
-										<h3>Box Heading</h3>
-										<div>
-											Box Content
-										</div>
-									</li>
-								</ul>
-							</li>
-							
-							<li class="column" data-transition-color='#FFB03D' data-column-color="#fff" style="color: #069;">		
-								<h2>Solid Background</h2>    		
-								<a class="image"><img src="image/demo/im.jpg" /></a>
-								<ul class="innerAccordian">
-									<li> 
-										<h3>Box Heading</h3>
-										<div>
-											Box Content
-										</div>
-									</li>
-								</ul>
-							</li>
-						</ul>            
-					</div>					
-				</div>
+                            <header>
+                                <h2>Quick Look</h2>
+                            </header>
+                            <div>
+                                <p>Here is how this plugins looks on the defaults options. Or you can look at the full <a href="demo.html">demo</a> instead</p>
+                                <script>
+                                    $(function() {	$("#demo-1").fancyMenu(); });
+                                </script>
+                                <div id="demo-1">
+                                    <ul class="columns">
+                                        <li class="column" data-transition-img='images/demo/patterns/1.jpg'>
+                                            <h2>Highlight Menu</h2>    		
+                                            <a class="image"><img src="image/demo/im.jpg" /></a>
+                                            <ul class="innerAccordian">
+                                                <li> 
+                                                    <h3>Box Heading</h3>
+                                                    <div>
+                                                        Box Content
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </li>
+
+                                        <li class="column" data-transition-img='images/demo/patterns/2.jpg' data-column-color="rgba(235, 128, 18, 0.8)">
+                                            <h2>Matching Column</h2>    		
+                                            <a class="image"><img src="image/demo/im.jpg" /></a>
+                                            <ul class="innerAccordian">
+                                                <li> 
+                                                    <h3>Box Heading</h3>
+                                                    <div>
+                                                        Box Content
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </li>
+
+                                        <li class="column" data-transition-img='images/demo/patterns/3.jpg'>
+                                            <h2>Default Setting</h2>    		
+                                            <a class="image"><img src="image/demo/im.jpg" /></a>
+                                            <ul class="innerAccordian">
+                                                <li> 
+                                                    <h3>Box Heading</h3>
+                                                    <div>
+                                                        Box Content
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </li>
+
+                                        <li class="column" data-transition-img='images/demo/patterns/4.jpg' data-column-color="rgb(168, 0, 67)">		
+                                            <h2>Opaque Columns</h2>    		
+                                            <a class="image"><img src="image/demo/im.jpg" /></a>
+                                            <ul class="innerAccordian">
+                                                <li> 
+                                                    <h3>Box Heading</h3>
+                                                    <div>
+                                                        Box Content
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </li>
+
+                                        <li class="column" data-transition-color='#FFB03D' data-column-color="#fff" style="color: #069;">		
+                                            <h2>Solid Background</h2>    		
+                                            <a class="image"><img src="image/demo/im.jpg" /></a>
+                                            <ul class="innerAccordian">
+                                                <li> 
+                                                    <h3>Box Heading</h3>
+                                                    <div>
+                                                        Box Content
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>            
+                                </div>					
+                            </div>
 			</section>
 
 			<section class="description">
-				<header>
-					<h2>Basic Usage</h1>
-				</header>
+                            <header>
+                                <h2>Basic Usage</h1>
+                            </header>
 
-				<p>
-					$('#container').fancyMenu();
-				</p>
+                            <p>
+                                $('#container').fancyMenu();
+                            </p>
 			</section>
 
+			<section class="description">
+                            <header>
+                                <h2>Try it already</h1>
+                            </header>
+
+                            <p>
+                                <a class="button" href="https://github.com/starx/jQuery-Fancy-Menu/zipball/master" target="_blank">Download</a>
+                            </p>
+			</section>
+            
+			<section class="description">
+                            <header>
+                                <h2>Like it? Want to support me keep building it?</h1>
+                            </header>
+
+                            <p>
+                                <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                                <input type="hidden" name="cmd" value="_s-xclick">
+                                <input type="hidden" name="hosted_button_id" value="Q5TU5NVWRQW9L">
+                                <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                                <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                                </form>                                
+                            </p>
+			</section>
         </div>
 
 
