@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+            <meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />	
+            <title>jQuery Fancy Columns - An awesome jQuery Column + Accordian Effect</title>	            
+            <meta name="description" content="An stylish jQuery Column effect + Accordian">
+            <meta name="keywords" content="jquery, effects, fancy, column, sliding, accordian">
+            <meta name="author" content="Nabin Nepal - St@rx">            
+            <META NAME="robots" CONTENT="index,follow">
+            <link rel='stylesheet' type='text/css' href='css/style.css' />			
+            <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>-->
+            <script src="js/jquery.js"></script>	
+            <script src="js/jquery.color.js"></script>	
+            <script src="js/jquery.animate-shadow.js"></script>
+            <script src='js/jquery.fancycolumns.js'></script>
+            
+            <style>
+                html, body { background: #eee; }
+                #wrapper { width: 960px; margin: 0 auto; background: #fff; }
+                #wrapper > section + section { margin-top: 1em; }
+                #wrapper section { margin-left: 1em; margin-right: 1em;}
+                #wrapper section header { margin-bottom: 1em; }
+            </style>
+    </head>
+
+    <body>
+        <div id="wrapper">
+			<section class="description">
+                            <header>
+                                <h1> jQuery Fancy Columns</h1>
+                            </header>
+
+                            <p>
+                                A plugin for showing off your pages.
+                            </p>
+			</section>
+			<section>
+				<header>
+                                    <h2>Quick Look</h2>
+				</header>
+				<div>
+					<p>Here is how this plugins looks on the defaults options. Or you can look at the full <a href="demo.html">demo</a> instead</p>
+					<style>
+						#demo-1 { height: 300px; }
+					</style>
+					<script>
+						$(function() {	$("#demo-1").fancyColumns(); });
+					</script>
+					<div id="demo-1">
+						<ul class="columns">
+							<li class="column" data-transition-img='images/demo/patterns/1.jpg'>
+								<h2>Column Heading</h2>    		
+								<a class="image"><img src="image/demo/im.jpg" /></a>
+								<ul class="innerAccordian">
+									<li> 
+										<h3>Box Heading</h3>
+										<div>
+											Box Content
+										</div>
+									</li>
+								</ul>
+							</li>
+							
+							<li class="column" data-transition-img='images/demo/patterns/2.jpg' data-column-color="rgba(235, 128, 18, 0.8)">
+								<h2>Matching Column</h2>    		
+								<a class="image"><img src="image/demo/im.jpg" /></a>
+								<ul class="innerAccordian">
+									<li> 
+										<h3>Box Heading</h3>
+										<div>
+											Box Content
+										</div>
+									</li>
+								</ul>
+							</li>
+							
+							<li class="column" data-transition-img='images/demo/patterns/3.jpg'>
+								<h2>Column Heading</h2>    		
+								<a class="image"><img src="image/demo/im.jpg" /></a>
+								<ul class="innerAccordian">
+									<li> 
+										<h3>Box Heading</h3>
+										<div>
+											Box Content
+										</div>
+									</li>
+								</ul>
+							</li>
+							
+							<li class="column" data-transition-img='images/demo/patterns/4.jpg' data-column-color="rgb(168, 0, 67)">		
+								<h2>Opaque Backgrounds</h2>    		
+								<a class="image"><img src="image/demo/im.jpg" /></a>
+								<ul class="innerAccordian">
+									<li> 
+										<h3>Box Heading</h3>
+										<div>
+											Box Content
+										</div>
+									</li>
+								</ul>
+							</li>
+							
+							<li class="column" data-transition-color='#FFB03D' data-column-color="#fff" style="color: #069;">		
+								<h2>Solid color background</h2>    		
+								<a class="image"><img src="image/demo/im.jpg" /></a>
+								<ul class="innerAccordian">
+									<li> 
+										<h3>Box Heading</h3>
+										<div>
+											Box Content
+										</div>
+									</li>
+								</ul>
+							</li>
+						</ul>            
+					</div>					
+				</div>
+			</section>
+
+        </div>
+
+
+    </body>
+
+</html>

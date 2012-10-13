@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+            <meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />	
+            <title>jQuery Fancy Columns - An awesome jQuery Column + Accordian Effect</title>	            
+            <meta name="description" content="An stylish jQuery Column effect + Accordian">
+            <meta name="keywords" content="jquery, effects, fancy, column, sliding, accordian">
+            <meta name="author" content="Nabin Nepal - St@rx">            
+            <META NAME="robots" CONTENT="index,follow">
+            <link rel='stylesheet' type='text/css' href='css/style.css' />			
+
+            <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>-->
+            <script src="js/jquery.js"></script>	
+            <script src="js/jquery.color.js"></script>	
+            <script src="js/jquery.animate-shadow.js"></script>
+            <script src='js/jquery.fancycolumns.js'></script>
+            
+            <script>
+                    //$(function() { $("#columns").fancyColumns(); });
+                    $(function() { 
+                            $("#wrapper").fancyColumns({
+                                    'mainColumnColor' : 'rgba(255,255,255,1)',
+                                    'effects' : {
+                                            'stair' : true
+                                    }
+                            }); 
+                    });
+            </script>
+    </head>
+
+    <body>
+        <div id="wrapper">
+          <ul class="columns">
+                <li class="column">		
+                    <h2>Top Movies</h2>    		
+                    <a class="image music">View Image</a>
+                    <ul class="innerAccordian">
+                        <li> 
+                            <h3>The Hunger Games</h3>
+                            <div>
+                                <img src="images/demo/the-hunger-games.jpg" width="100%" />
+                            </div>
+                        </li>
+                        <li> 
+                            <h3>American Reunion</h3>
+                            <div>
+                                
+                            </div>
+                        </li>
+                        <li> 
+                            <h3>Titanic</h3>
+                            <div>
+                                
+                            </div>
+                        </li>
+                        <li> 
+                            <h3>Wrath of the Titans</h3>
+                            <div>
+                                
+                            </div>
+                        </li>
+                        <li> 
+                            <h3>Mirror Mirror</h3>
+                            <div>
+                                
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                
+                <li class="column">		
+                    <h2>Trailers</h2>    		
+                    <a class="image music">View Image</a>
+                    <ul class="innerAccordian">
+                        <li> 
+                            <h3>Most Watched</h3>
+                            <div>
+                                
+                            </div>
+                        </li>
+                        <li> 
+                            <h3>Latest Trailers</h3>
+                            <div>
+                                
+                            </div>
+                        </li>
+                        <li> 
+                            <h3>Opening this week</h3>
+                            <div>
+                                
+                            </div>
+                        </li>
+                        <li> 
+                            <h3>Family Films</h3>
+                            <div>
+                                
+                            </div>
+                        </li>
+                        <li> 
+                            <h3>Indie Films</h3>
+                            <div>
+                                
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                
+                <li class="column">
+					<h2>In Theatres</h2>
+                    <a class="image music">View Image</a>
+                    <ul class="innerAccordian">
+                        <li id="starter"> 
+                            <h3>LockOut</h3>
+                            <div>
+                                A man wrongly convicted of conspiracy to commit espionage against the U.S. is offered his freedom if he can rescue the president's daughter from an outer space prison taken over by violent inmates. 
+                            </div>
+                        </li>
+                        <li> 
+                            <h3>The Three Stooges (2012)</h3>
+                            <div>
+                                While trying to save their childhood orphanage, Moe, Larry, and Curly inadvertently stumble into a murder plot and wind up starring in a reality TV show. 
+                            </div>
+                        </li>
+                        <li> 
+                            <h3>The Cabin in the Woods (2011)</h3>
+                            <div>
+                                Five friends go for a break at a remote cabin in the woods, where they get more than they bargained for. Together, they must discover the truth behind the cabin in the woods. 
+                            </div>
+                        </li>
+                        <li> 
+                            <h3>Monsieur Lazhar (2011)</h3>
+                            <div>
+                                At a Montréal public grade school, an Algerian immigrant is hired to replace a popular teacher who committed suicide in her classroom. While helping his students deal with their grief, his own recent loss is revealed.
+                            </div>
+                        </li>
+                        <li> 
+                            <h3>Woman Thou Art Loosed: On the 7th Day (2012)</h3>
+                            <div>
+                                The Ames' seem to have built the perfect life until their six year old daughter is kidnapped; over the course of seven days they begin to uncover secrets about their past that could rip their marriage and lives apart. 
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                
+                <li class="column">		
+                    <h2>Comming Soon</h2>    		
+                    <a class="image music">View Image</a>
+                    <ul class="innerAccordian">
+                        <li> 
+                            <h3>The Lucky One (2012)</h3>
+                            <div>
+                                A Marine travels to North Carolina after serving three tours in Iraq and searches for the unknown woman he believes was his good luck charm during the war. 
+                            </div>
+                        </li>
+                        <li> 
+                            <h3>Think Like a Man (2012)</h3>
+                            <div>
+                                Four friends conspire to turn the tables on their women when they discover the ladies have been using Steve Harvey's relationship advice against them. 
+                            </div>
+                        </li>
+                        <li> 
+                            <h3>Chimpanzee (2012)</h3>
+                            <div>
+                                A 3-year-old chimpanzee is separated from his troop and is then adopted by a fully-grown male. 
+                            </div>
+                        </li>
+                        <li> 
+                            <h3>To the Arctic 3D (2012)</h3>
+                            <div>
+                                A journey into the lives of a mother polar bear and her two seven-month-old cubs as they navigate the changing Arctic wilderness they call home. 
+                            </div>
+                        </li>
+                        <li> 
+                            <h3>Darling Companion (2012)</h3>
+                            <div>
+                                The story of a woman who loves her dog more than her husband. And then her husband loses the dog. 
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                
+                <li class="column">		
+                    <h2>Spotlight</h2>    		
+                    <a class="image music">View Image</a>
+                    <ul class="innerAccordian">
+                        <li> 
+                            <h3>The Hunger Games</h3>
+                            <div>
+                                
+                            </div>
+                        </li>
+                        <li> 
+                            <h3>Road to Oscars</h3>
+                            <div>
+                                
+                            </div>
+                        </li>
+                        <li> 
+                            <h3>John Carter</h3>
+                            <div>
+                                
+                            </div>
+                        </li>
+                        <li> 
+                            <h3>Sundance Film Festival 2012</h3>
+                            <div>
+                                
+                            </div>
+                        </li>
+                        <li> 
+                            <h3>The Twilight Saga: Breaking Dawn, Part 1</h3>
+                            <div>
+                                
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>            
+
+        </div>
+
+
+    </body>
+
+</html>
