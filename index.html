@@ -13,31 +13,47 @@
             <script src="js/jquery.js"></script>	
             <script src="js/jquery.color.js"></script>	
             <script src="js/jquery.animate-shadow.js"></script>
-            <script src='js/jquery.fancycolumns.js'></script>
+            <script src='js/jquery.fancy-menu.js'></script>
             
             <style>
-                html, body { background: #eee; }
-                #wrapper { width: 960px; margin: 0 auto; background: #fff; }
+				* { margin: 0; padding: 0; outline:none; }
+                html, body { 
+					background: #eee; 
+					height: 100%; overflow: hidden;  					
+					font: 12px Verdana, Geneva, sans-serif;
+				}
+                
+                #wrapper { 
+					width: 960px; 
+					margin: 0 auto; 
+					background: #fff; 
+					border: 5px #ccc solid; 
+					border-style: none solid none solid; 
+					padding: 2em 1em;
+				}
                 #wrapper > section + section { margin-top: 1em; }
                 #wrapper section { margin-left: 1em; margin-right: 1em;}
                 #wrapper section header { margin-bottom: 1em; }
+                
+                #demo-1 { margin-top: 1em; padding: 0 1em; }
+                
             </style>
     </head>
 
     <body>
         <div id="wrapper">
 			<section class="description">
-                            <header>
-                                <h1> jQuery Fancy Columns</h1>
-                            </header>
+				<header>
+					<h1> jQuery Fancy Columns</h1>
+				</header>
 
-                            <p>
-                                A plugin for showing off your pages.
-                            </p>
+				<p>
+					A plugin for showing off your pages.
+				</p>
 			</section>
 			<section>
 				<header>
-                                    <h2>Quick Look</h2>
+					<h2>Quick Look</h2>
 				</header>
 				<div>
 					<p>Here is how this plugins looks on the defaults options. Or you can look at the full <a href="demo.html">demo</a> instead</p>
@@ -45,12 +61,12 @@
 						#demo-1 { height: 300px; }
 					</style>
 					<script>
-						$(function() {	$("#demo-1").fancyColumns(); });
+						$(function() {	$("#demo-1").fancyMenu(); });
 					</script>
 					<div id="demo-1">
 						<ul class="columns">
 							<li class="column" data-transition-img='images/demo/patterns/1.jpg'>
-								<h2>Column Heading</h2>    		
+								<h2>Highlight Menu</h2>    		
 								<a class="image"><img src="image/demo/im.jpg" /></a>
 								<ul class="innerAccordian">
 									<li> 
@@ -76,7 +92,7 @@
 							</li>
 							
 							<li class="column" data-transition-img='images/demo/patterns/3.jpg'>
-								<h2>Column Heading</h2>    		
+								<h2>Default Setting</h2>    		
 								<a class="image"><img src="image/demo/im.jpg" /></a>
 								<ul class="innerAccordian">
 									<li> 
@@ -89,7 +105,7 @@
 							</li>
 							
 							<li class="column" data-transition-img='images/demo/patterns/4.jpg' data-column-color="rgb(168, 0, 67)">		
-								<h2>Opaque Backgrounds</h2>    		
+								<h2>Opaque Columns</h2>    		
 								<a class="image"><img src="image/demo/im.jpg" /></a>
 								<ul class="innerAccordian">
 									<li> 
@@ -102,7 +118,7 @@
 							</li>
 							
 							<li class="column" data-transition-color='#FFB03D' data-column-color="#fff" style="color: #069;">		
-								<h2>Solid color background</h2>    		
+								<h2>Solid Background</h2>    		
 								<a class="image"><img src="image/demo/im.jpg" /></a>
 								<ul class="innerAccordian">
 									<li> 
@@ -116,6 +132,16 @@
 						</ul>            
 					</div>					
 				</div>
+			</section>
+
+			<section class="description">
+				<header>
+					<h2>Basic Usage</h1>
+				</header>
+
+				<p>
+					$('#container').fancyMenu();
+				</p>
 			</section>
 
         </div>

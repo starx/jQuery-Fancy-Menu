@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+            <meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />	
+            <title>Basic Demo: jQuery Fancy Columns - An awesome jQuery Column + Accordian Effect</title>	            
+            <meta name="description" content="An stylish jQuery Column effect + Accordian">
+            <meta name="keywords" content="jquery, effects, fancy, column, sliding, accordian">
+            <meta name="author" content="Nabin Nepal - St@rx">            
+            <META NAME="robots" CONTENT="index,follow">
+            <link rel='stylesheet' type='text/css' href='../css/style.css' />			
+            <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>-->
+            <script src="../js/jquery.js"></script>	
+            <script src="../js/jquery.color.js"></script>	
+            <script src="../js/jquery.animate-shadow.js"></script>
+            <script src='../js/jquery.fancy-menu.js'></script>
+            
+            <style>
+				* { margin: 0; padding: 0; outline:none; }
+                html, body { 
+					background: #eee; 
+					height: 100%; overflow: hidden;  					
+					font: 12px Verdana, Geneva, sans-serif;
+				}
+                
+                #wrapper { 
+					width: 960px; 
+					margin: 0 auto; 
+					background: #fff; 
+					border: 5px #ccc solid; 
+					border-style: none solid none solid; 
+					padding: 2em 1em;
+				}
+                #wrapper > section + section { margin-top: 1em; }
+                #wrapper section { margin-left: 1em; margin-right: 1em;}
+                #wrapper section header { margin-bottom: 1em; }
+                
+                #demo-2 { margin: 1em 1em 0 1em; height: 300px; }
+                
+            </style>
+    </head>
+
+    <body>
+        <div id="wrapper">
+			<section class="description">
+				<header>
+					<h1> Basic Demo</h1>
+				</header>
+
+				<p>
+					<script>
+						$(function() {	$("#demo-2").fancyMenu(); });
+					</script>
+					<div id="demo-2">
+						<ul class="columns">							
+							<li class="column">
+								<h2>Default Setting</h2>    		
+								<a class="image"><img src="../image/demo/im.jpg" /></a>
+								<ul class="innerAccordian">
+									<li> 
+										<h3>Box Heading</h3>
+										<div>
+											Box Content
+										</div>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>					
+				</p>				
+			</section>
+
+			<section class="description">
+				<header>
+					<h2>Codes</h1>
+				</header>
+
+				<p>
+					$('#container').fancyMenu();
+				</p>
+			</section>
+
+        </div>
+
+
+    </body>
+
+</html>
