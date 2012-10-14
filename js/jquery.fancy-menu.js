@@ -33,6 +33,9 @@
 		$el.addClass(settings.identifier.containerClass)
 			.css('margin', settings.offset);
 		$columns = $el.children("li");
+                
+                var columnsWidth = $columns.length >= 1 ? $columns.length == 1 ? 98 : 100 / (($columns.length - 1) + 1.5) : 0;
+                var mainColumnWidth = $columns.length > 1 ? 1.5 * columnsWidth : 98;
 			
 		if(settings.mainColumn == 'auto') {
 			$mainColumnIndex = Math.round(($columns.size())/2);
@@ -94,7 +97,7 @@
 
                                     //resize previous column to normal size
                                     $(this).animate({
-                                        width: "17.99%",
+                                        width: columnsWidth+"%",
                                         backgroundColor: "rgba("+cValue+","+cValue+","+cValue+",0.8)",
                                         boxShadow: '0'
                                     }, 200, function() {
@@ -120,7 +123,7 @@
 			// make the current column the large size and the change background color  also add the current col to the list
 			$parentColumn.addClass('expanding').delay(0).animate({				    
 					backgroundColor: $columnColor,
-					width: "28%"
+					width: mainColumnWidth+"%"
 			}, function() { 
 				$("."+settings.identifier.currentColumn).removeClass(settings.identifier.currentColumn);
 				$parentColumn.addClass(settings.identifier.currentColumn).removeClass('expanding').animate({ boxShadow: settings.mainColumnShadow }, 'fast');
