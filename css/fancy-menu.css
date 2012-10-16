@@ -1,0 +1,38 @@
+.fancyMenu { 
+   height: 100%;
+   overflow: hidden;
+ }
+
+ul.fancyMenu h1, ul.fancyMenu h2, ul.fancyMenu h3, ul.fancyMenu, ul.fancyMenu ul { padding: 0; margin: 0; }
+
+
+.column { float: left;height: 100%; position: relative; list-style: none;   }
+.column h2 { text-align: center; font-weight: normal; background: rgba(0,0,0,0.2); color: #fff; display: block; padding: 2%; margin-bottom:1px; cursor: pointer; }
+.column ul { list-style: none; }
+.column ul li { margin: 0 0 1% 0; }
+.column ul li h3 { 
+	background: rgba(0,0,0,0.1); 
+	padding: 1% 2%; 
+	font-size: 1em;
+	text-align: center;
+	cursor: pointer;
+}
+.column ul li div {
+	padding: 2%;
+}
+/* Active Column Effect */
+.curCol {
+	z-index: 10; 
+	position: relative; 
+}
+
+.column { margin: 0; width: 18%; }
+.column:nth-of-type(2n+1) { background-color:rgba(255,255,255,0.8); }
+.column:nth-of-type(2n+2) { background-color:rgba(245,245,245,0.8); }
+.column:nth-of-type(3) { background-color:rgba(235,235,235,0.8);  }
+.column.curCol { background-color: rgba(0,102,153,0.9); width: 28%; }
+.curCol li { color:#FFF; }	
+.curCol li h3, .curCol li div { text-align: left; }
+
+
+.image { margin: 5% 2% 5% 2%; height: 100px; text-indent: -9999px; width: 96%; display: none; background: url("../images/demo/bgSmall.jpg") center top; }

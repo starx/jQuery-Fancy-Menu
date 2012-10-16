@@ -1,42 +1,33 @@
-.fancyMenu { 
-   height: 100%;
-   overflow: hidden;
- }
-
-#columns { 
-	height: 100%; 
-	width: 90%; 
-	margin: 0 auto; 	
-
-}
- 
-.column { float: left;height: 100%; position: relative; list-style: none;   }
-.column h2 { text-align: center; font-weight: normal; background: rgba(0,0,0,0.2); color: #fff; display: block; padding: 2%; margin-bottom:1px; cursor: pointer; }
-.column ul { list-style: none; }
-.column ul li { margin: 0 0 1% 0; }
-.column ul li h3 { 
-	background: rgba(0,0,0,0.1); 
-	padding: 1% 2%; 
-	font-size: 1em;
-	text-align: center;
-	cursor: pointer;
-}
-.column ul li div {
-	padding: 2%;
-}
-/* Active Column Effect */
-.curCol {
-	z-index: 10; 
-	position: relative; 
+* { margin: 0; padding: 0; outline:none; }
+html, body { 
+    background: #eee; 
+    height: 100%;
+    font: 12px Verdana, Geneva, sans-serif;
 }
 
-.column { margin: 0; width: 18%; }
-.column:nth-of-type(2n+1) { background-color:rgba(255,255,255,0.8); }
-.column:nth-of-type(2n+2) { background-color:rgba(245,245,245,0.8); }
-.column:nth-of-type(3) { background-color:rgba(235,235,235,0.8);  }
-.column.curCol { background-color: rgba(0,102,153,0.9); width: 28%; }
-.curCol li { color:#FFF; }	
-.curCol li h3, .curCol li div { text-align: left; }
+#wrapper { 
+    width: 960px; 
+    margin: 0 auto; 
+    background: #fff; 
+    border: 5px #ccc solid; 
+    border-style: none solid none solid; 
+    padding: 2em 1em;
+}
+#wrapper > section + section { margin-top: 1em; }
+#wrapper section { margin-left: 1em; margin-right: 1em;}
+#wrapper section header { margin-bottom: 1em; }
 
+#demo-1 { margin-top: 1em; height: 300px; }                
 
-.image { margin: 5% 2% 5% 2%; height: 100px; text-indent: -9999px; width: 96%; display: none; background: url("../images/demo/bgSmall.jpg") center top; }
+.button {
+    padding: 1em 2em;
+    border: 2px #ccc solid;
+    color: #000;
+    font-weight: bold;
+    text-decoration: none;
+    margin: 1em 0 0 0;
+    display: inline-block;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+}
