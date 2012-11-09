@@ -11,11 +11,36 @@ html, body {
     background: #fff; 
     border: 5px #ccc solid; 
     border-style: none solid none solid; 
-    padding: 2em 1em;
+    padding: 0 1em 2em 1em;
 }
-#wrapper > section + section { margin-top: 1em; }
-#wrapper section { margin-left: 1em; margin-right: 1em;}
-#wrapper section header { margin-bottom: 1em; }
+#mainNavigation {
+	font-size: 10px;
+	border-radius: 0 0 5px 60px;
+	-moz-box-shadow: 0 0 5px 1px #aaa inset;
+	-webkit-shadow: 0 0 5px 1px #aaa inset;
+	-o-box-shadow: 0 0 5px 1px #aaa inset;
+	box-shadow: 0 -3px 5px 0px #ccc inset;
+	padding: 2px 40px 8px 30px;
+	background: #eee;
+	margin: 0 0 1em 0;
+	width: 500px;
+	float: right;
+	overflow: hidden;
+}
+#mainNavigation a { color: #000; display: inline-block; border-bottom: 1px dotted #333; text-decoration: none;  }
+#mainNavigation ul { text-align:right; }
+#mainNavigation ul li { display: inline-block;}
+
+
+.main.description { clear: both; margin-top: 2em; }
+#wrapper > .description + .description, .contentColumns .contentColumn + .contentColumn { margin-top: 1em; }
+#wrapper section.description { margin: 0 1em; }
+#wrapper section.description header { margin-bottom: 1em; }
+
+.contentColumns { overflow: hidden; }
+.contentColumns .main, .contentColumns .side { float: left; }
+.contentColumns .main {	width: 615px; margin-right: 20px; }
+.contentColumns .side {	width: 300px; }
 
 #demo-1 { margin-top: 1em; height: 300px; }                
 

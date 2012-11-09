@@ -3,7 +3,7 @@
    overflow: hidden;
  }
 
-ul.fancyMenu h1, ul.fancyMenu h2, ul.fancyMenu h3, ul.fancyMenu, ul.fancyMenu ul { padding: 0; margin: 0; }
+ul.fancyMenu, ul.innerAccordian { padding: 0; margin: 0; }
 
 
 .column { float: left;height: 100%; position: relative; list-style: none;   }
