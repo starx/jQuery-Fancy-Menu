@@ -22,7 +22,8 @@
 			'mainColumnShadow' : '0 0 10px 0px #666',
 			'identifier' : {
 				'containerClass' : 'fancyMenu',
-				'currentColumn' : "curCol"
+				'columnClass' : 'column',
+				'currentColumnClass' : "curCol"
 			}
 		}, options);
 		
@@ -45,8 +46,8 @@
 			$mainColumn = $columns.eq($mainColumnIndex-1);
 		}
 		
-		$curColumn = $("li."+settings.identifier.currentColumn, $el);
-		$otherColumns = $("li:not(."+settings.identifier.currentColumn+")", $el);
+		$curColumn = $("li."+settings.identifier.currentColumnClass, $el);
+		$otherColumns = $("li:not(."+settings.identifier.currentColumnClass+")", $el);
 		$allTitles = $("h2", $columns);
 
 		$allAccordianTitles = $columns.find("ul.innerAccordian li h3");
@@ -125,24 +126,26 @@
 					backgroundColor: $columnColor,
 					width: mainColumnWidth+"%"
 			}, function() { 
-				$("."+settings.identifier.currentColumn).removeClass(settings.identifier.currentColumn);
-				$parentColumn.addClass(settings.identifier.currentColumn).removeClass('expanding').animate({ boxShadow: settings.mainColumnShadow }, 'fast');
+				$("."+settings.identifier.currentColumnClass).removeClass(settings.identifier.currentColumnClass);
+				$parentColumn.addClass(settings.identifier.currentColumnClass).removeClass('expanding').animate({ boxShadow: settings.mainColumnShadow }, 'fast');
 			});
 		};
                 
 		return $(this).each(function() {
 			
-			$("ul.innerAccordian", $columns).on("click", "li", function() {
-			   if($(this).hasClass('active')) {
-				   $(this).removeClass("active").children("div").slideUp("slow");
-				   $(this).closest(".column").find(".image").slideDown().css("display", "block");
+			$("ul.innerAccordian", $columns).on("click", "li h3", function() {
+			   var list = $(this).parent("li");
+			   if(list.hasClass('active')) {
+				   list.removeClass("active").children("div").slideUp("slow");
+				   list.closest(settings.identifier.columnClass).find(".image").slideDown().css("display", "block");
 			   } else {
 					$(".active").removeClass("active").children("div").slideUp("slow");
-					$(this).closest(".column").find(".image").slideUp();
-					$("div", $(this)).slideDown();
-					$(this).addClass("active");
-					var $parentColumn = $(this).parent().parent();
-					animateColumns($parentColumn);
+					var liParent = list.closest("."+settings.identifier.columnClass); //The parent Column
+					
+					liParent.find(".image").slideUp();
+					$("div", list).slideDown();
+					list.addClass("active");
+					animateColumns(liParent);
 			   } 
 			});
                         
